@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Pro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: blue;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        footer {
+            background: blue;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .service {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+        }
+        .service a{
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Profit Pro</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#bookkeeping">Bookkeeping</a>
+            <a href="#reports">Reports</a>
+            <a href="#usersettings">User Settings</a>
+            <a href="#manager">Manager</a>
+            <a href="#administrator">Administrator</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="services">
+            <h2>Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3><a href="#bookkeeping">Bookkeeping</a></h3>
+                    <p>Accurate bookkeeping services to keep your finances in order.</p>
+                </div>
+                <div class="service">
+                    <h3><a href="#reports">Reports</a></h3>
+                    <p>Balance Sheets, Ledgers, and all other reports for your company.</p>
+                </div>
+                <div class="service">
+                    <h3><a href="#bookkeeping">Entries</a></h3>
+                    <p>One stop shop for daily ledger entries and updated ledgers</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; Profit Pros LLC</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Pro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: blue;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        footer {
+            background: blue;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .administratorsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        fieldset {
+            margin-bottom: 30px;
+        }
+        input {
+            height: auto;
+            display: block;
+            width: 20%;
+            margin: 5px;
+        }
+        input[id="bodyEmail"]{
+            width: 75%;
+            padding: 60px;
+        }
+    </style>
+    <script>
+        document.getElementById("defaultOpen").click();
+
+        function openTab(evt, cityName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Profit Pro</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#bookkeeping">Bookkeeping</a>
+            <a href="#reports">Reports</a>
+            <a href="#usersettings">User Settings</a>
+            <a href="#manager">Manager</a>
+            <a href="#administrator">Administrator</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="amdministratorsection">
+            <h2>Administrator</h2>
+            <div class="services">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'User')" id="defaultOpen">Users</button>
+                    <button class="tablinks" onclick="openTab(event, 'Roles')">Roles</button>
+                    <button class="tablinks" onclick="openTab(event, 'Create_User')">Create User</button>
+                    <button class="tablinks" onclick="openTab(event, 'Activation')">Activation</button>
+                    <button class="tablinks" onclick="openTab(event, 'Email')">Email</button>
+                    <button class="tablinks" onclick="openTab(event, 'Suspend')">Suspend</button>
+                </div>
+                <div id="User" class="tabcontent">
+                    <h3>Users</h3>
+                    <p>User List</p>
+                </div>
+                  
+                <div id="Roles" class="tabcontent">
+                    <h3>Roles</h3>
+                    <p>Shows users and roles</p>
+                </div>
+                  
+                <div id="Create_User" class="tabcontent">
+                    <h3>Create User</h3>
+                    <fieldset>
+                      
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name">
+                      
+                        <label for="email">Email:</label>
+                        <input type="email" id="mail" name="user_email">
+                     
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="user_password">
+      
+                        <label for="street_number">Street Num:</label>
+                        <input type="text" id="street_number" name="user_street_number">
+      
+                        <label for="street_name">Street Name:</label>
+                        <input type="text" id="street_name" name="user_street_name">
+      
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="user_city">
+      
+                        <label for="state">State:</label>
+                        <input type="text" id="state" name="user_state">
+      
+                        <label for="zip_code">Zip Code</label>
+                        <input type="text" id="zip_code" name="user_zip_code">
+                      
+                        <label>DOB:</label>
+      
+                        <label for="month">Month</label>
+                        <input type="text" id="month" name="user_month">
+      
+                        <label for="birthday">Day</label>
+                        <input type="text" id="birthday" name="user_day">
+      
+                        <label for="year">Year</label>
+                        <input type="text" id="year" name="user_year">
+      
+                    </fieldset>
+
+                    <button>Create User</button>
+                </div>
+
+                <div id="Activation" class="tabcontent">
+                    <h3>Activation</h3>
+                    <p>Activate or deactivate a user</p>
+                </div>
+
+                <div id="Email" class="tabcontent">
+                    <h3>Email</h3>
+                    
+                    <label for="toEmail">To:</label>
+                    <input type="text" id="toEmail" name="toEmail">
+
+                    <label for="bodyEmail">Body:</label>
+                    <input type="text" id="bodyEmail" name="bodyEmail">
+
+                    <button>Send</button>
+                </div>
+
+                <div id="Suspend" class="tabcontent">
+                    <h3>Suspend</h3>
+                    <p>Suspend user</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; Profit Pros LLC</p>
+    </footer>
+</body>
+</html>
