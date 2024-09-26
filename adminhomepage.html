@@ -83,6 +83,16 @@
             width: 75%;
             padding: 60px;
         }
+        tr {
+            border-bottom: 1px solid black;
+            width: 100%;
+        }
+        td {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+        }
     </style>
     <script>
         document.getElementById("defaultOpen").click();
@@ -131,12 +141,54 @@
                 </div>
                 <div id="User" class="tabcontent">
                     <h3>Users</h3>
-                    <p>User List</p>
+                    <table>
+                        <tr>
+                            <th>User ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>DOB</th>
+                        </tr>
+                        <tr>
+                            <td>test</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
                 </div>
                   
                 <div id="Roles" class="tabcontent">
                     <h3>Roles</h3>
-                    <p>Shows users and roles</p>
+                    <table>
+                        <tr>
+                            <th>User ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>DOB</th>
+                            <th>Role</th>
+                        </tr>   
+                        <tr>
+                            <td>test</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <select name="role" id="role">
+                                    <option value="role1">Role1</option>
+                                    <option value="role2">Role2</option>
+                                    <option value="role3">Role3</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                   
                 <div id="Create_User" class="tabcontent">
@@ -185,7 +237,31 @@
 
                 <div id="Activation" class="tabcontent">
                     <h3>Activation</h3>
-                    <p>Activate or deactivate a user</p>
+                    <table>
+                        <tr>
+                            <th>User ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>DOB</th>
+                            <th>Role</th>
+                        </tr>   
+                        <tr>
+                            <td>test</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <select name="activationlist" id="activation">
+                                    <option value="activate_user">Activate</option>
+                                    <option value="deactivate_user">Deactivate</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
 
                 <div id="Email" class="tabcontent">
@@ -202,7 +278,31 @@
 
                 <div id="Suspend" class="tabcontent">
                     <h3>Suspend</h3>
-                    <p>Suspend user</p>
+                    <table>
+                        <tr>
+                            <th>User ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>DOB</th>
+                            <th>Role</th>
+                        </tr>   
+                        <tr>
+                            <td>test</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <select name="suspendselect" id="suspend">
+                                    <option value="suspend_user">Suspend</option>
+                                    <option value="activate_user">Activate</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </section>
