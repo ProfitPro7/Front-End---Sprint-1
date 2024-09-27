@@ -11,25 +11,51 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         header {
             background: blue;
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
         }
+
         nav {
-            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 0;
         }
+
         nav a {
             color: #ffffff;
-            margin: 0 15px;
             text-decoration: none;
+            padding: 10px 20px;
         }
+
+        /* Stand-out Login/Sign Up Button */
+        .cta-button-nav {
+            background-color: #ffffff;
+            color: blue;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button-nav:hover {
+            background-color: #f4f4f4;
+            color: darkblue;
+        }
+
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
         }
+
         footer {
             background: blue;
             color: #ffffff;
@@ -39,22 +65,56 @@
             bottom: 0;
             width: 100%;
         }
-        .services {
+
+        /* Updated Layout */
+        .services,
+        .why-choose-us-container {
             display: flex;
             justify-content: space-around;
             margin: 20px 0;
         }
-        .service {
-            background: #ffffff;
+
+        .service,
+        .reason {
+            background-color: white;
             padding: 20px;
-            border-radius: 5px;
+            margin: 10px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
             width: 30%;
+            text-align: center;
         }
-        .service a{
-            color: black;
+
+        .service:hover,
+        .reason:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .service a,
+        .reason a {
             text-decoration: none;
+            color: black;
+            font-weight: bold;
         }
+
+        /* Call to Action (Login/Sign Up) */
+        .cta-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        /* New hover animation for "Why Choose Us" reasons */
+        .why-choose-us h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-us {
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -67,11 +127,15 @@
             <a href="#usersettings">User Settings</a>
             <a href="#manager">Manager</a>
             <a href="adminhomepage.html">Administrator</a>
+            <!-- Stand-out Login/Sign Up Button -->
+            <a href="signin-signup.html" class="cta-button-nav">Login / Sign Up</a>
         </nav>
     </header>
+
     <div class="container">
+        <!-- Services Section (as boxes) -->
         <section id="services">
-            <h2>Services</h2>
+            <h2 style="text-align: center;">Our Services</h2>
             <div class="services">
                 <div class="service">
                     <h3><a href="#bookkeeping">Bookkeeping</a></h3>
@@ -82,12 +146,35 @@
                     <p>Balance Sheets, Ledgers, and all other reports for your company.</p>
                 </div>
                 <div class="service">
-                    <h3><a href="#bookkeeping">Entries</a></h3>
-                    <p>One stop shop for daily ledger entries and updated ledgers</p>
+                    <h3><a href="#entries">Entries</a></h3>
+                    <p>One stop shop for daily ledger entries and updated ledgers.</p>
                 </div>
             </div>
         </section>
+
+        <!-- Why Choose Us Section (as boxes) -->
+        <section class="why-choose-us" id="why-choose-us">
+            <h2>Why Choose Us</h2>
+            <div class="why-choose-us-container">
+                <div class="reason">
+                    <p><strong>Reliable and Efficient:</strong> We provide reliable financial solutions with tools that save you time and increase efficiency.</p>
+                </div>
+                <div class="reason">
+                    <p><strong>User-Friendly Platform:</strong> Our easy-to-use platform makes bookkeeping and managing finances stress-free.</p>
+                </div>
+                <div class="reason">
+                    <p><strong>Custom Solutions:</strong> We tailor our services to meet the specific needs of your business, no matter the size.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us" id="about-us">
+            <h2>About Us</h2>
+            <p>Profit Pro was founded with the mission to simplify financial management for businesses of all sizes. Our team of dedicated professionals works tirelessly to offer innovative solutions that help you streamline your accounting processes. We pride ourselves on providing user-friendly services that save you time and money, so you can focus on what truly matters: growing your business.</p>
+        </section>
     </div>
+
     <footer>
         <p>&copy; Profit Pros LLC</p>
     </footer>
